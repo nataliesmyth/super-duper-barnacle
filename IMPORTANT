@@ -1,0 +1,26 @@
+//JS Class - not hoisted, must declare first.
+
+unlike arrays, objects use named keys rather than indices to order and access those pieces of data
+
+The key - value store functions kind of like a dictionary that pairs words with definitions, and you can look up a definition by finding the word
+
+Key Value Pairs
+Each item in an object is a key-value pair like this: company: "Toy Machine".
+
+A key can be either a name, a number or a string, the corresponding value to a key can be any value part of JavaScript, including arrays, null or undefinedand even another object. Objects structures can therefore be nested (objects inside objects) and of any complexity
+
+
+
+
+Object Literal Notation: you definied the object literally
+
+Here's an empty Object Literal:
+
+const myShinyObject = {
+    shoesize: 7,
+    height: 6 + "ft"
+};
+
+const bigfoot = {
+    wheels: 4;
+}

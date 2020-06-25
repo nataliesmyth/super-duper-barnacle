@@ -1,0 +1,55 @@
+  User Stories
+  // 3 buttons: A, B, C
+  //    A: feedPet
+  //    B
+
+  // User creates pet name, CLICKS submit
+  // egg appears
+  // hatching lasts: 15 seconds, during which cracks appear and egg wobbles
+  // at 15 seconds, egg cracks, TAMAGATCHI appears timer starts
+
+  //BUTTONS
+  // feedMe
+  // 
+
+  HTML POKE-A-SQUARE TIMER 
+    <title>Poke-A-Square</title>
+</head>
+<body>
+
+    <header>
+      <h1>Scoreboard: 0</h1>
+      <span id="timer">timer: 30s</span>
+      <span id="round">round: 1</span>
+      <button id="startGame">Begin</button>
+    </header>
+
+    <section class="squares">
+    </section>
+
+    // == User Stories/game logic == //
+// When the user clicks begin, the timer should start and the squares should populate with a random color
+
+  // Mising Details
+    // What colors? - Red, Blue, Green. Purple
+    // How many squares? - Round 1 = 25 squares, multiply squares by 2 per round
+    // What are squares? - Box on screen with a random color
+    // WHere should they populate - inside the squares section
+    // What should the timer start at? - 30s
+
+// When the user clicks on a color: the color should disapear and score should be added or subtracted.
+
+  // Missing Details
+    // What adds score, what subtracts score - Blue square click adds 1 point, all else subtract 1 point
+    // How quickly should it disappear - Immediately
+    // How many points should added or subtracted - 1 point
+
+// When the round is over, the scores, round and timer should be updated for the user to start over with increased difficulty.
+
+  // Missing Details
+    // How many players? - 1
+    // What is the measure of difficulty? - Number of squares and Time
+    // What ends a round - When time = 0
+    // How Rounds - 3
+
+  // What happens when the player wins?
