@@ -30,27 +30,37 @@ function handleStartGame () {
 }
 
 function handleHungry () {
-console.log("I am in hungryFunction");
+  if (hungry > 0) {
+    hungry--
+    hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
+  }
 }
 
 function handleLightsOut () {
-  console.log("I am in handleLightsOut");
+  if (sleep > 0) {
+    sleep--
+    sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
+  }
+  
 }
 
-function handlePlayTime (){
-  console.log("I am in handlePlayTime");
+function handlePlayTime () {
+  if (play > 0) {
+    play--
+    playTimerPlaceholder.textContent = `play: ${play}`;
+  }
 }
 
 function startTimer() {
     const Timer = setInterval(function () {
       if (time <= 10) {
         time++
-        timerPlaceHolder.textContent = `timer: ${time}`;
+        timerPlaceHolder.textContent = `age: ${time}`;
       } else {
         console.log("Time is up");
         clearInterval(Timer);
       }
-    }, 1000);
+    }, 15000);
   }
 
   function startHungryTimer() {
@@ -62,7 +72,7 @@ function startTimer() {
         console.log("Time is up");
         clearInterval(Timer);
       }
-    }, 1000);
+    }, 5000);
   }
 
   function startSleepTimer() {
@@ -74,7 +84,7 @@ function startTimer() {
         console.log("Time is up");
         clearInterval(Timer);
       }
-    }, 1000);
+    }, 10000);
   }
 
   function startPlayTimer() {
@@ -86,7 +96,7 @@ function startTimer() {
         console.log("Time is up");
         clearInterval(Timer);
       }
-    }, 1000);
+    }, 7000);
   }
 
 hungryButton.addEventListener("click", handleHungry);
