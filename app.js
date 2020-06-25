@@ -5,10 +5,20 @@ let hungryButton = document.getElementById('hungry');
 let lightsOutButton = document.getElementById('sleep');
 let playTimeButton = document.getElementById('play');
 let startGameButton = document.getElementById('startGame');
+let time = 0;
+let timerPlaceHolder = document.getElementById("timer");
 
 console.log(hungryButton);
 console.log(lightsOutButton);
 console.log(playTimeButton);
+
+function handleStartGame () {
+  let name = prompt("What is your name?");
+  let namePlaceHolder = document.getElementById('name');
+  namePlaceHolder.textContent = name;
+  startTimer();
+  console.log(namePlaceHolder);
+}
 
 function handleHungry () {
 console.log("I am in hungryFunction");
@@ -22,14 +32,24 @@ function handlePlayTime (){
   console.log("I am in handlePlayTime");
 }
 
-function handleStartGame () {
-  console.log("I am in start game function!");
-}
+function startTimer() {
+    const Timer = setInterval(function () {
+      if (time <= 10) {
+        time++
+        timerPlaceHolder.textContent = `timer: ${time}`;
+      } else {
+        console.log("Time is up");
+        clearInterval(Timer);
+      }
+    }, 1000);
+  }
+
 
 hungryButton.addEventListener("click", handleHungry);
 lightsOutButton.addEventListener("click", handleLightsOut);
 playTimeButton.addEventListener("click", handlePlayTime);
 startGameButton.addEventListener("click", handleStartGame);
+
 
 
 // o  n "Eat" button pressed
