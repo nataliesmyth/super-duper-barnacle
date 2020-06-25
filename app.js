@@ -6,17 +6,26 @@ let lightsOutButton = document.getElementById('sleep');
 let playTimeButton = document.getElementById('play');
 let startGameButton = document.getElementById('startGame');
 let time = 0;
+let hungry = 0;
+let sleep = 0;
+let play = 0;
 let timerPlaceHolder = document.getElementById("timer");
+let hungryTimerPlaceholder = document.getElementById("hungryTimer");
+let playTimerPlaceholder = document.getElementById("playTimer");
+let sleepTimerPlaceholder = document.getElementById("sleepTimer");
 
-console.log(hungryButton);
-console.log(lightsOutButton);
-console.log(playTimeButton);
+console.log(hungryTimerPlaceholder);
+console.log(sleepTimerPlaceholder);
+console.log(playTimerPlaceholder);
 
 function handleStartGame () {
   let name = prompt("What is your name?");
   let namePlaceHolder = document.getElementById('name');
   namePlaceHolder.textContent = name;
   startTimer();
+  startHungryTimer();
+  startSleepTimer();
+  startPlayTimer();
   console.log(namePlaceHolder);
 }
 
@@ -44,6 +53,41 @@ function startTimer() {
     }, 1000);
   }
 
+  function startHungryTimer() {
+    const Timer = setInterval(function () {
+      if (hungry <= 10) {
+        hungry++
+        hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
+      } else {
+        console.log("Time is up");
+        clearInterval(Timer);
+      }
+    }, 1000);
+  }
+
+  function startSleepTimer() {
+    const Timer = setInterval(function () {
+      if (sleep <= 10) {
+        sleep++
+        sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
+      } else {
+        console.log("Time is up");
+        clearInterval(Timer);
+      }
+    }, 1000);
+  }
+
+  function startPlayTimer() {
+    const Timer = setInterval(function () {
+      if (play <= 10) {
+        play++
+        playTimerPlaceholder.textContent = `play: ${play}`;
+      } else {
+        console.log("Time is up");
+        clearInterval(Timer);
+      }
+    }, 1000);
+  }
 
 hungryButton.addEventListener("click", handleHungry);
 lightsOutButton.addEventListener("click", handleLightsOut);
