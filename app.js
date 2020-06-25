@@ -1,6 +1,37 @@
 
 console.log("Sanity check");
 
+let hungryButton = document.getElementById('hungry');
+let lightsOutButton = document.getElementById('sleep');
+let playTimeButton = document.getElementById('play');
+let startGameButton = document.getElementById('startGame');
+
+console.log(hungryButton);
+console.log(lightsOutButton);
+console.log(playTimeButton);
+
+function handleHungry () {
+console.log("I am in hungryFunction");
+}
+
+function handleLightsOut () {
+  console.log("I am in handleLightsOut");
+}
+
+function handlePlayTime (){
+  console.log("I am in handlePlayTime");
+}
+
+function handleStartGame () {
+  console.log("I am in start game function!");
+}
+
+hungryButton.addEventListener("click", handleHungry);
+lightsOutButton.addEventListener("click", handleLightsOut);
+playTimeButton.addEventListener("click", handlePlayTime);
+startGameButton.addEventListener("click", handleStartGame);
+
+
 // o  n "Eat" button pressed
 //              if "hunger" is = true, then
 //                 decrement "bone" count
@@ -15,17 +46,17 @@ console.log("Sanity check");
 //             reset timer to 10
 
 
-//JS Class
-class Tamagaohi {
-    constructor(name) {
-        this.name = name;
-    }
+// //JS Class
+// class Tamagaohi {
+//     constructor(name) {
+//         this.name = name;
+//     }
 
-        // this.hunger = 0;
-        // this.age = 0;
-        // this.sleepiness = 0;
-        // this.boredom = 0;    
-}
+//         // this.hunger = 0;
+//         // this.age = 0;
+//         // this.sleepiness = 0;
+//         // this.boredom = 0;    
+// }
 
 
 
