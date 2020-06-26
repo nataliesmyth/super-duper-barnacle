@@ -41,7 +41,6 @@ function handleLightsOut () {
     sleep--
     sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
   }
-  
 }
 
 function handlePlayTime () {
@@ -52,51 +51,61 @@ function handlePlayTime () {
 }
 
 function startTimer() {
-    const Timer = setInterval(function () {
-      if (time <= 10) {
+    setInterval(function () {
+      if (time < 10) {
         time++
         timerPlaceHolder.textContent = `age: ${time}`;
       } else {
-        console.log("Time is up");
-        clearInterval(Timer);
+        death();
       }
     }, 15000);
   }
 
   function startHungryTimer() {
-    const Timer = setInterval(function () {
-      if (hungry <= 10) {
+    setInterval(function () {
+      if (hungry < 10) {
         hungry++
         hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
       } else {
-        console.log("Time is up");
-        clearInterval(Timer);
+        death();
       }
     }, 5000);
   }
 
   function startSleepTimer() {
-    const Timer = setInterval(function () {
-      if (sleep <= 10) {
+    setInterval(function () {
+      if (sleep < 10) {
         sleep++
         sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
       } else {
-        console.log("Time is up");
-        clearInterval(Timer);
+        death();
       }
     }, 10000);
   }
 
   function startPlayTimer() {
-    const Timer = setInterval(function () {
-      if (play <= 10) {
+    setInterval(function () {
+      if (play < 10) {
         play++
         playTimerPlaceholder.textContent = `play: ${play}`;
       } else {
-        console.log("Time is up");
-        clearInterval(Timer);
+        death();
       }
-    }, 7000);
+    }, 1000);
+  }
+
+  function death() {
+    console.log(time);
+    console.log(hungry);
+    console.log(sleep);
+    console.log(play);
+
+    if (time === 10 || hungry === 10 || sleep === 10 || play === 10) {
+      clearInterval(startPlayTimer);
+      clearInterval(startHungryTimer);
+      clearInterval(startTimer);
+      clearInterval(startSleepTimer);
+    }
   }
 
 hungryButton.addEventListener("click", handleHungry);
@@ -106,7 +115,7 @@ startGameButton.addEventListener("click", handleStartGame);
 
 
 
-// o  n "Eat" button pressed
+//           "Eat" button pressed
 //              if "hunger" is = true, then
 //                 decrement "bone" count
 //                 reset timer to 10
