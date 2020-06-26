@@ -1,3 +1,16 @@
+  Tamagotchi
+GA - PROJECT ZERO - Natalie Smyth
+
+<----- OBJECTIVE ----->
+
+Build a tamagotchi, a virtual pet that user keeps alive by making sure they are fed, rested, and adequately played with.
+
+Technology Used:
+• HTML
+• CSS
+• JAVASCRIPT
+
+// == User Stories/game logic == //
   User Stories
   // 3 buttons: A, B, C
   //    A: feedPet
@@ -27,7 +40,7 @@
     <section class="squares">
     </section>
 
-    // == User Stories/game logic == //
+    
 // When the user clicks begin, the timer should start and the squares should populate with a random color
 
   // Mising Details

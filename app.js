@@ -1,6 +1,3 @@
-
-console.log("Sanity check");
-
 let hungryButton = document.getElementById('hungry');
 let lightsOutButton = document.getElementById('sleep');
 let playTimeButton = document.getElementById('play');
@@ -9,14 +6,15 @@ let time = 0;
 let hungry = 0;
 let sleep = 0;
 let play = 0;
-let timerPlaceHolder = document.getElementById("timer");
+let timerPlaceholder = document.getElementById("timer");
 let hungryTimerPlaceholder = document.getElementById("hungryTimer");
 let playTimerPlaceholder = document.getElementById("playTimer");
 let sleepTimerPlaceholder = document.getElementById("sleepTimer");
 
-console.log(hungryTimerPlaceholder);
-console.log(sleepTimerPlaceholder);
-console.log(playTimerPlaceholder);
+// console.log(hungryTimerPlaceholder);
+// console.log(sleepTimerPlaceholder);
+// console.log(playTimerPlaceholder);
+
 
 function handleStartGame () {
   let name = prompt("What is your name?");
@@ -31,7 +29,7 @@ function handleStartGame () {
 
 function handleHungry () {
   if (hungry > 0) {
-    hungry--
+    hungry--;
     hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
   }
 }
@@ -53,8 +51,8 @@ function handlePlayTime () {
 function startTimer() {
     setInterval(function () {
       if (time < 10) {
-        time++
-        timerPlaceHolder.textContent = `age: ${time}`;
+        time++;
+        timerPlaceholder.textContent = `age: ${time}`;
       } else {
         death();
       }
@@ -64,7 +62,7 @@ function startTimer() {
   function startHungryTimer() {
     setInterval(function () {
       if (hungry < 10) {
-        hungry++
+        hungry++;
         hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
       } else {
         death();
@@ -75,7 +73,7 @@ function startTimer() {
   function startSleepTimer() {
     setInterval(function () {
       if (sleep < 10) {
-        sleep++
+        sleep++;
         sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
       } else {
         death();
@@ -86,7 +84,7 @@ function startTimer() {
   function startPlayTimer() {
     setInterval(function () {
       if (play < 10) {
-        play++
+        play++;
         playTimerPlaceholder.textContent = `play: ${play}`;
       } else {
         death();
@@ -94,16 +92,17 @@ function startTimer() {
     }, 1000);
   }
 
+  // exit game
   function death() {
-    console.log(time);
-    console.log(hungry);
-    console.log(sleep);
-    console.log(play);
+    // console.log(time);
+    // console.log(hungry);
+    // console.log(sleep);
+    // console.log(play);
 
     if (time === 10 || hungry === 10 || sleep === 10 || play === 10) {
+      clearInterval(startTimer);
       clearInterval(startPlayTimer);
       clearInterval(startHungryTimer);
-      clearInterval(startTimer);
       clearInterval(startSleepTimer);
     }
   }

@@ -1,13 +1,69 @@
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
+  @white: #f8f8ff;
+@offwhite: #F0EAD6;
+
 body {
-    background-color: rgb(21, 21, 24);
-    color: white;
+    background-color: rgb(5, 102, 141);
+    color: rgb(248, 248, 255);
+    margin: 2em auto;
   }
+
+  .egg {
+    background-color: rgb(240, 243, 189);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 250px;
+    border-top-left-radius: 50% 60%;
+    border-top-right-radius: 50% 60%;
+    border-bottom-left-radius: 50% 40%;
+    border-bottom-right-radius: 50% 40%;
+    box-shadow: inset -10px -5px rgba(138, 139, 109, 0.808);
+    animation: wobble 8s linear infinite;
+    transform-origin: 0 50%;
+  }
+
+  /* @random: `Math.random() * 45`;
+  @moreRandom: `Math.random() * -45`; */
+  @keyframes wobble {
+    0% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+    25% {
+        transform: rotate(unit(@random, deg)) translate(-50%, -50%);
+    }
+    75% {
+        transform: rotate(unit(@moreRandom, deg)) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(0deg) translate(-50%, -50%);
+    }
+  }
+
+  .pet {
+      background-color: rgb(248, 248, 194);
+      position: fixed;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100px;
+      border: 15px solid rgb(253, 253, 226);
+      width: 126px;
+      height: 180px;
+  }
+
+.gameButtons {
+
+}
 
 .tomBox {
     position: relative;
