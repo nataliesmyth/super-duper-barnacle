@@ -93,7 +93,7 @@ function startTimer() {
   }
 
   // exit game
-  function death() {
+  function ripPet() {
     // console.log(time);
     // console.log(hungry);
     // console.log(sleep);
