@@ -14,7 +14,12 @@ body {
   }
 
   h1 {
-    margin: auto;
+    margin: .5em;
+    font-weight: 900;
+  }
+
+  p {
+    margin: 1em;
   }
 
   button {
@@ -52,7 +57,7 @@ body {
     padding: 5px;    
 }
 
-/* .egg {
+/*  .egg {
     background-color: rgb(240, 243, 189);
     position: fixed;
     top: 40%;
@@ -94,7 +99,7 @@ body {
 
   /* FACE */
  
-  /* .eyeleft {
+  .eyeleft {
     position: absolute;
     top: 44%;
     left: 36%;
@@ -126,10 +131,10 @@ body {
       height: 5px;
       background-color: #AC9969;
       border-radius: 100%;
-    } */
+    }
 
     /* ANIMATION */
-/*     
+    
    @-webkit-keyframes wobble { 
       0% { -webkit-transform: translateX(0%); } 
       15% { -webkit-transform: translateX(-25%) rotate(-5deg); } 
@@ -154,4 +159,4 @@ body {
       -webkit-animation-name: wobble; 
       animation-name: wobble; 
    }
-   */
+  

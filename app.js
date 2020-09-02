@@ -1,7 +1,7 @@
+let startGameButton = document.getElementById('startGame');
 let hungryButton = document.getElementById('hungry');
 let lightsOutButton = document.getElementById('sleep');
 let playTimeButton = document.getElementById('play');
-let startGameButton = document.getElementById('startGame');
 let time = 0;
 let hungry = 0;
 let sleep = 0;
@@ -24,7 +24,7 @@ function handleStartGame () {
   startHungryTimer();
   startSleepTimer();
   startPlayTimer();
-  console.log(namePlaceHolder);
+  // console.log(namePlaceHolder);
 }
 
 function handleHungry () {
@@ -54,7 +54,7 @@ function startTimer() {
         time++;
         timerPlaceholder.textContent = `age: ${time}`;
       } else {
-        death();
+        ripPet();
       }
     }, 15000);
   }
@@ -65,9 +65,9 @@ function startTimer() {
         hungry++;
         hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
       } else {
-        death();
+        ripPet();
       }
-    }, 5000);
+    }, 3000);
   }
 
   function startSleepTimer() {
@@ -76,7 +76,7 @@ function startTimer() {
         sleep++;
         sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
       } else {
-        death();
+        ripPet();
       }
     }, 10000);
   }
@@ -87,7 +87,7 @@ function startTimer() {
         play++;
         playTimerPlaceholder.textContent = `play: ${play}`;
       } else {
-        death();
+        ripPet();
       }
     }, 1000);
   }
