@@ -17,6 +17,7 @@ let sleepTimerPlaceholder = document.getElementById("sleepTimer");
 
 
 function handleStartGame () {
+  // user input is saved in name variable
   let name = prompt("What is your name?");
   let namePlaceHolder = document.getElementById('name');
   namePlaceHolder.textContent = name;
@@ -27,6 +28,7 @@ function handleStartGame () {
   // console.log(namePlaceHolder);
 }
 
+//  handle FNS tell timer what to do when button is clicked
 function handleHungry () {
   if (hungry > 0) {
     hungry--;
@@ -89,7 +91,7 @@ function startTimer() {
       } else {
         ripPet();
       }
-    }, 10000);
+    }, 6500);
   }
 
   // exit game
