@@ -3,9 +3,9 @@ let hungryButton = document.getElementById('hungry');
 let lightsOutButton = document.getElementById('sleep');
 let playTimeButton = document.getElementById('play');
 let time = 0;
-let hungry = 1;
-let sleep = 1;
-let play = 1;
+let hungry = 0;
+let sleep = 0;
+let play = 0;
 let timerPlaceholder = document.getElementById("timer");
 let hungryTimerPlaceholder = document.getElementById("hungryTimer");
 let playTimerPlaceholder = document.getElementById("playTimer");
@@ -53,10 +53,10 @@ function startTimer() {
       if (time < 10) {
         time++;
         timerPlaceholder.textContent = `age: ${time}`;
-      } else {
+      } else if (time == 10) {
         ripPet();
       }
-    }, 15000);
+    }, 1000);
   }
 
   function startHungryTimer() {
@@ -67,7 +67,7 @@ function startTimer() {
       } else {
         ripPet();
       }
-    }, 3000);
+    }, 2000);
   }
 
   function startSleepTimer() {
@@ -78,7 +78,7 @@ function startTimer() {
       } else {
         ripPet();
       }
-    }, 10000);
+    }, 6000);
   }
 
   function startPlayTimer() {
@@ -89,7 +89,7 @@ function startTimer() {
       } else {
         ripPet();
       }
-    }, 1000);
+    }, 10000);
   }
 
   // exit game
