@@ -30,21 +30,22 @@ function handleStartGame () {
 
 //  handle FNS tell timer what to do when button is clicked
 function handleHungry () {
-  if (hungry > 0) {
+  // 
+  if (hungry > 0 && hungry < 10) {
     hungry--;
     hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
   }
 }
 
 function handleLightsOut () {
-  if (sleep > 0) {
+  if (sleep > 0 && sleep < 10) {
     sleep--
     sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
   }
 }
 
 function handlePlayTime () {
-  if (play > 0) {
+  if (play > 0 && play < 10) {
     play--
     playTimerPlaceholder.textContent = `play: ${play}`;
   }
