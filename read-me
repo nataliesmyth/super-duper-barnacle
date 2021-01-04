@@ -22,26 +22,15 @@ Technology Used:
   // at 15 seconds, egg cracks, TAMAGATCHI appears timer starts
 
   //BUTTONS
-  // feedMe
-  // 
+  // Feed
+  // Play
+  // Sleep
 
-  HTML POKE-A-SQUARE TIMER 
-    <title>Poke-A-Square</title>
-</head>
-<body>
-
-    <header>
-      <h1>Scoreboard: 0</h1>
-      <span id="timer">timer: 30s</span>
-      <span id="round">round: 1</span>
-      <button id="startGame">Begin</button>
-    </header>
-
-    <section class="squares">
-    </section>
+  
 
     
-// When the user clicks begin, the timer should start and the squares should populate with a random color
+// When the user clicks begin, the timer should start and the tamagotchi's hunger, bordome, and sleepiness will increase at different rates.
+// User
 
   // Mising Details
     // What colors? - Red, Blue, Green. Purple

@@ -1,7 +1,7 @@
+let startGameButton = document.getElementById('startGame');
 let hungryButton = document.getElementById('hungry');
 let lightsOutButton = document.getElementById('sleep');
 let playTimeButton = document.getElementById('play');
-let startGameButton = document.getElementById('startGame');
 let time = 0;
 let hungry = 0;
 let sleep = 0;
@@ -17,6 +17,7 @@ let sleepTimerPlaceholder = document.getElementById("sleepTimer");
 
 
 function handleStartGame () {
+  // user input is saved in name variable
   let name = prompt("What is your name?");
   let namePlaceHolder = document.getElementById('name');
   namePlaceHolder.textContent = name;
@@ -24,25 +25,27 @@ function handleStartGame () {
   startHungryTimer();
   startSleepTimer();
   startPlayTimer();
-  console.log(namePlaceHolder);
+  // console.log(namePlaceHolder);
 }
 
+//  handle FNS tell timer what to do when button is clicked
 function handleHungry () {
-  if (hungry > 0) {
+  // 
+  if (hungry > 0 && hungry < 10) {
     hungry--;
     hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
   }
 }
 
 function handleLightsOut () {
-  if (sleep > 0) {
+  if (sleep > 0 && sleep < 10) {
     sleep--
     sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
   }
 }
 
 function handlePlayTime () {
-  if (play > 0) {
+  if (play > 0 && play < 10) {
     play--
     playTimerPlaceholder.textContent = `play: ${play}`;
   }
@@ -53,10 +56,10 @@ function startTimer() {
       if (time < 10) {
         time++;
         timerPlaceholder.textContent = `age: ${time}`;
-      } else {
-        death();
+      } else if (time == 10) {
+        ripPet();
       }
-    }, 15000);
+    }, 1000);
   }
 
   function startHungryTimer() {
@@ -65,9 +68,9 @@ function startTimer() {
         hungry++;
         hungryTimerPlaceholder.textContent = `hungry: ${hungry}`;
       } else {
-        death();
+        ripPet();
       }
-    }, 5000);
+    }, 2000);
   }
 
   function startSleepTimer() {
@@ -76,9 +79,9 @@ function startTimer() {
         sleep++;
         sleepTimerPlaceholder.textContent = `sleep: ${sleep}`;
       } else {
-        death();
+        ripPet();
       }
-    }, 10000);
+    }, 6000);
   }
 
   function startPlayTimer() {
@@ -87,13 +90,13 @@ function startTimer() {
         play++;
         playTimerPlaceholder.textContent = `play: ${play}`;
       } else {
-        death();
+        ripPet();
       }
-    }, 1000);
+    }, 6500);
   }
 
   // exit game
-  function death() {
+  function ripPet() {
     // console.log(time);
     // console.log(hungry);
     // console.log(sleep);
