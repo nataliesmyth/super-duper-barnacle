@@ -26,6 +26,7 @@ function handleStartGame () {
   startSleepTimer();
   startPlayTimer();
   // console.log(namePlaceHolder);
+  startGameButton.hidden = true;
 }
 
 //  handle FNS tell timer what to do when button is clicked
