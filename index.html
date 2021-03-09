@@ -5,38 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/app.js"></script>
     <title>Tamagotchi</title>
 </head>
 
 <body>
     <header>
-    <h1 id="name"></h1>
-    <p id="timer" class="timer"></p>
-    <p id="hungryTimer" class="timer"></p>
-    <p id="sleepTimer" class="timer"></p>
-    <p id="playTimer" class="timer"></p>
+        <h1>Tamagotchi</h1>
     </header>
-    
-    <div class="startButton">
-        <button id="startGame">START</button>
-    </div>
+  
+    <main>
+        
+        <div class="startButton">
+            <button id="startGame">START</button>
+        </div>
 
-    <div class="gameButtons">
-        <button id="hungry">FOOD</button>
-        <button id="play">PLAY</button>
-        <button id="sleep">SLEEP</button>
-    </div>
-    <div class="animated">
-    <div class="eyeleft"></div>
-    <div class="eyeright"></div>
-    <div class="mouth"></div>
-    
+        <div id="game">
+            <div class="pet-name-age">
+                <h2 id="name">name: </h2>
+                <h2 id="timer" class="timer">age: </h2>
+            </div>
+
+            <div class="gameTimers">
+                <p id="hungryTimer" class="timer">hunger: </p>
+                <p id="playTimer" class="timer">boredom: </p>
+                <p id="sleepTimer" class="timer">sleepiness: </p>
+            </div>
+        
             
 
-    <div class="pet"></div>
+            <!-- <div class="tamagotchi"> -->
+                <div class="animated" id="egg">
+                    <div class="eyeleft"></div>
+                    <div class="eyeright"></div>
+                    <div class="mouth"></div>
+                    <div class="pet"></div>
+                </div>    
+            <!-- </div> -->
 
+            <div class="bird" id="bird">
+                <div class="bird-eye"></div>
+            </div>
+
+            <div class="gameButtons" id="gameBtns">
+                <button id="hungry">Feed me!</button>
+                <button id="play">Lets Play!</button>
+                <button id="sleep">Lights out!</button>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
