@@ -1,16 +1,24 @@
-# tomagatchi
+# Tamagotchi
+
 Project Zero
 
-Objective
+## Important Links
 
-Build a tamagotchi game. Users will take care of a virtual pet that the user tries to keep alive until the old age by making sure they are fed, rested, and adequately played with.
+Deployed Project: https://pages.git.generalassemb.ly/Nataliesmyth/tomagatchi/
 
-Technology Used:
+Project Repository: https://git.generalassemb.ly/Nataliesmyth/tomagatchi
+
+## Objective
+
+Build a tamagotchi game. Users can name their pet, then feed, play with, and put their pet to sleep.
+
+### Technology Used
+
 • HTML
 • CSS
 • JAVASCRIPT
 
-Wireframe:
+### Wireframe
 
 User Stories
 
@@ -18,11 +26,4 @@ User Stories
    when submit is clicked, pet comes out, the game started and the timer begins
    Age, hunger, sleepiness, and bordome increase at different intervals
    If age equals ten, you win, your pet lived a long, active, full, and rested life.
-   If hunger, sleepiness, and bordome reach ten, 
-   
-  BUTTONS
-• HTML
-• CSS
-• JAVASCRIPT
-
-THANK YOU:
+   If hunger, sleepiness, and bordome reach ten before age, user lost the game.

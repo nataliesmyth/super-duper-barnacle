@@ -38,6 +38,8 @@ function handleHungry () {
   if (hungry > 0 && hungry < 10) {
     hungry--;
     hungryTimerPlaceholder.textContent = `hunger: ${hungry}`;
+  } else if (hungry === 10) {
+    console.log('your pet got to hungry and you lost!')
   }
 }
 
