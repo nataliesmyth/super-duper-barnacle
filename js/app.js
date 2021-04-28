@@ -104,6 +104,7 @@ function startTimer() {
   // exit game
   function ripPet() {
     console.log('you lost!')
+    startGameButton.hidden = false;
     // console.log(time);
     // console.log(hungry);
     // console.log(sleep);
