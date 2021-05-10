@@ -2,6 +2,7 @@
   --blue: rgb(5, 102, 141);
   --white: rgb(248, 248, 255);
   --green: rgb(2, 195, 154);
+  --hover: rgb(1, 156, 123);
   --yellow: rgb(240, 243, 189);
 }
 
@@ -24,11 +25,15 @@ button {
   margin: 1em auto;
   background-color: var(--green);
   border-radius: 5px; 
-  border: .75em solid var(--yellow);
+  border: .5em solid var(--yellow);
   padding: 1em;
   font-size: 1em;
   font-weight: 700;
   width: 138.65px;
+  transition: background-color 0.5s ease;
+}
+button:hover {
+  background-color: var(--hover);
 }
 
 h1 {
@@ -97,7 +102,9 @@ p {
   text-align: center;
   position: relative;
   top: -75px;
+  transition: background-color 0.3s ease;
 }
+
 
 .pet-name-age {
   padding: 2em;
